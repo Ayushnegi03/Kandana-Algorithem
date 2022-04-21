@@ -1,0 +1,17 @@
+//Kandanealgorithm to find maximum sum of subarray in JavaScript
+const arr = [-2, -3, 4, -1, -2, 1, 5, -3];
+const maxSequence = (Arr = []) => {
+   let Current_Sum = 0
+   let Max_Sum = 0
+   for (let element of Arr) {
+      const nextSum = Current_Sum + element
+      Max_Sum = Math.max(Max_Sum, nextSum)
+      Current_Sum = Math.max(nextSum, 0)
+   }
+   return Max_Sum
+};
+console.log(arr);
+console.log("The Sum of all the number:");
+console.log(maxSequence(arr));
+//Output--
+//6
