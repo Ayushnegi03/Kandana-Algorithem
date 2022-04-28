@@ -1,0 +1,20 @@
+//Kandane Algorithem
+//Kadane’s algorithm is used to find out the maximum subarray sum from an array of integers. 
+#include<iostream>
+using namespace std;
+int Kadanes(int Array[],int Length) {
+   int HighestMax = 0;
+   int Max = 0;
+   for(int i = 0; i < Length; i++){
+      Max =max(Array[i],Max + Array[i]) ;
+      HighestMax = max(HighestMax,Max);
+   }
+   return highestMax;
+}
+int main() {
+   int arr[6]={3,2,-1,-6,1,7};
+   cout << "The Maximum Sum is: "<<Kadanes(arr,6) << endl;
+   return 0;
+}
+//Output-
+//THe Maximum Sum is:8
